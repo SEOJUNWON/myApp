@@ -1,0 +1,23 @@
+
+<mat-card>
+    <mat-card-content>
+        <h2 class ="example-h2">WORLD CLOCK</h2>
+        <section>
+                <div class="example-button-row">
+                <button mat-fab class="example-margin" color="warn" (click)="isCountry('Seoul')">Seoul</button>
+                <button mat-fab class="example-margin" color="warn" (click)="isCountry('New York')">New York</button>
+                <button mat-fab class="example-margin" color="warn" (click)="isCountry('London')">London</button>
+                <button mat-fab class="example-margin" color="warn" (click)="isCountry('Auckland')">Auckland</button>
+                <button mat-fab class="example-margin" color="warn" (click)="isCountry('Seattle')">Seattle</button>
+                <button mat-fab class="example-margin" color="warn" (click)="isCountry('Tokyo')">Tokyo</button>
+                <button mat-fab class="example-margin" color="warn" (click)="isCountry('Berlin')">Berlin</button>
+                <button mat-fab class="example-margin" color="warn" (click)="isCountry('Beijing')">Beijing</button>
+                </div>
+        </section>
+        <div class ="time-section" *ngIf="showClock">
+        <h3 class ="example-h2">{{country}} : {{ todayDate | date: 'HH:mm:ss' :utc}}</h3>
+        </div>
+        
+
+    </mat-card-content>
+</mat-card>

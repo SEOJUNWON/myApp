@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-content class="card-content">
+        <section>
+            <h3 class ="time-section">{{displayTime}}</h3>
+        </section>
+
+        <section class = "example-section">
+            <div class="example-button-row">
+                <button mat-raised-button  (click)="resetTime()" >{{isStart ? "Reset" : "Lap"}}</button>
+                <button mat-raised-button [color]="isStart ? 'primary' : 'accent'"  (click)="firstClick()">{{isStart ? "Start" : "Stop"}}</button>
+                
+            </div>
+        </section>
+
+        <section class ="lap-section">
+            <p *ngFor="let list of lap">
+            {{list}}
+            </p>
+        </section>
+                
+        
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,74 @@
+
+<mat-card>
+    <mat-card-content>
+        <h2 class ="example-h2">Progress spinner configuration</h2>
+
+        <section class = "example-section">
+            <label>Brand:</label>
+            <mat-radio-group [(ngModel)]="brand">
+                <mat-radio-button class="example-margin" value = 'hyundai'>Hyundai</mat-radio-button>
+                <mat-radio-button class="example-margin" value = 'kia'>Kia</mat-radio-button>
+                <mat-radio-button class="example-margin" value = 'chevrolet'>Chevrolet</mat-radio-button>
+            </mat-radio-group>
+        </section>
+
+        <section class = "example-section" *ngIf = "brand === 'hyundai'">
+            <label>Car:</label>
+            <mat-radio-group [(ngModel)]="car">
+                <mat-radio-button class="example-margin" value = 'accent'>Accent</mat-radio-button>
+                <mat-radio-button class="example-margin" value = 'avante'>Avante</mat-radio-button>
+                <mat-radio-button class="example-margin" value = 'sonata'>Sonata</mat-radio-button>
+                <mat-radio-button class="example-margin" value = 'grandeur'>Grandeur</mat-radio-button>
+            </mat-radio-group>
+        </section>
+        <section class = "example-section" *ngIf = "brand === 'kia'">
+            <label>Car:</label>
+            <mat-radio-group [(ngModel)]="car">
+                <mat-radio-button class="example-margin" value = 'K3'>K3</mat-radio-button>
+                <mat-radio-button class="example-margin" value = 'K5'>K5</mat-radio-button>
+                <mat-radio-button class="example-margin" value = 'K7'>K7</mat-radio-button>
+                <mat-radio-button class="example-margin" value = 'K9'>K9</mat-radio-button>
+            </mat-radio-group>
+        </section>
+        <section class = "example-section" *ngIf = "brand === 'chevrolet'">
+            <label>Car:</label>
+            <mat-radio-group [(ngModel)]="car">
+                <mat-radio-button class="example-margin" value = 'K3'>Spark</mat-radio-button>
+                <mat-radio-button class="example-margin" value = 'K5'>Cruze</mat-radio-button>
+                <mat-radio-button class="example-margin" value = 'K7'>Malibu</mat-radio-button>
+                <mat-radio-button class="example-margin" value = 'K9'>Camaro</mat-radio-button>
+            </mat-radio-group>
+        </section>
+
+        <section class = "example-section">
+            <label>Color:</label>
+            <mat-radio-group [(ngModel)]="color">
+                <mat-radio-button class="example-margin" value = 'black'>Black</mat-radio-button>
+                <mat-radio-button class="example-margin" value = 'white'>White</mat-radio-button>
+                <mat-radio-button class="example-margin" value = 'gray'>Gray</mat-radio-button>
+                <mat-radio-button class="example-margin" value = 'blule'>Blue</mat-radio-button>
+            </mat-radio-group>
+        </section>
+
+        <section class = "example-section">
+            <label>Distance</label>
+            <mat-slider (slideend)="sliderOnChange(value)"
+            (pointerup)="sliderOnChange(value)" class="example-margin" min="0" max="100000" step="100" [(ngModel)]="value"></mat-slider>
+        </section>
+
+    </mat-card-content>
+</mat-card>
+
+<mat-card>
+    <mat-card-content>
+        <h2 class ="example-h2">Result</h2>
+
+        <mat-progress-spinner
+            class="example-margin"
+            [color]="color"
+            [value]="calvalue">
+        </mat-progress-spinner>
+        <h2 clss = "example-h2">{{calvalue}}KM</h2>    
+    <h2 clss = "example-h2">{{value}}KM</h2>
+    </mat-card-content>
+</mat-card>

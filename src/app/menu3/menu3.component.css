@@ -1,0 +1,46 @@
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+  text-align:center;
+}
+mat-slider {
+    width: 300px;
+  }
+  .example-h2 {
+    margin: 10px;
+  }
+  
+  .example-section {
+    display: block;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+    text-align:center;;
+
+  }
+  
+  .example-margin {
+    margin: 0 10px;
+  }
+
+  .time-section {
+    border:0px solid #dedede;
+    line-height:50px;
+    columns: #666666;
+    font-size:50px;
+    text-align:center;
+    display: block;
+  }
+  .lap-section {
+    border:0px solid #dedede;
+    line-height:20px;
+    columns: #666666;
+    font-size:40px;
+    text-align:center;
+    display: block;
+  }
+
+  .card-content{
+    width:600px
+}
+

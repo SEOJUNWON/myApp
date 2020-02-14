@@ -1,0 +1,21 @@
+<mat-card class="card-content" >
+    <mat-card-content >
+    <section>
+        <mat-card-title class="time-section">{{city}}미세먼지정보</mat-card-title>
+    
+</section>
+<section class="lab-section" >
+    
+    <h2 class="time-section">미세먼지농도 : <span style=" color:salmon">{{dust10}}</span></h2>
+    <h2 class="time-section">미세먼지 등급 : <span style=" color:royalblue">{{dust10grade}}</span></h2>
+    <h2 class="time-section">초미세먼지농도 : <span style=" color:salmon">{{dust25 }}</span></h2>
+    <h2 class="time-section">초미세먼지 등급 : <span style=" color:royalblue">{{dust25grade}}</span></h2>
+</section>
+<section  class = "example-section">
+<div class="example-button-row">
+    <button mat-raised-button  (click)="getDust()" >미세먼지정보확인</button>
+</div>
+</section>
+        
+    </mat-card-content>
+</mat-card>
