@@ -21,11 +21,11 @@ export class Menu5Component implements OnInit {
   }
 
   getDust(){
-    this._http.get(this.API_URI,{responseType:'xml'}).subscribe(result => {
+    this._http.get(this.API_URI,{responseType:'text'}).subscribe(result => {
       const parser = new DOMParser();
       const xml = parser.parseFromString(result, 'text/xml');
-      const obj = this.ngxXml2jsonService.xmlToJson(xml);
-       console.log(obj);
+      const obj:any = this.ngxXml2jsonService.xmlToJson(xml);
+      console.log(obj);
       console.log(obj.response.body.items.item[0].stationName);
       this.city = "<"+obj.response.body.items.item[0].stationName+">";
       this.dust10 = obj.response.body.items.item[0].pm10Value;

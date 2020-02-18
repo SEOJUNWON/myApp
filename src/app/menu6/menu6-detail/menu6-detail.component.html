@@ -1,0 +1,29 @@
+<h3 mat-dialog-title>
+    정보추가
+</h3>
+
+<div #dialog mat-dialog-content>
+    <form [formGroup]="form">
+        <div class="form-group m-form__group donation-group row">
+
+            <div class="col-lg-12">
+                <label class="required">아이디</label>
+                <input type="text" class="form-control m-input"  formControlName="user_id" placeholder="아이디를 입력하세요">
+            </div>
+            <div class="col-lg-12">
+                <label class="required">비밀번호</label>
+                <input type="text" class="form-control m-input"  formControlName="user_pw"
+                    placeholder="비밀번호를 입력하세요">
+            </div>
+
+
+
+            <div class="m-separator m-separator--dashed"></div>
+
+            <div class="btns_right_align">
+                <button type="button" class="btn btn-sm btn-metal" (click)="onClickClose()">닫기</button>
+                <button type="button" class="btn btn-sm btn-primary" (click)="onClickSave()">등록</button>
+            </div>
+        </div>
+    </form>
+</div>
