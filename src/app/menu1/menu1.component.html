@@ -1,21 +1,22 @@
 
-<mat-card>
-    <mat-card-content>
+<mat-card class = "clock-section">
+    <mat-card-content class="container text-center" >
         <h2 class ="example-h2">WORLD CLOCK</h2>
         <section>
                 <div class="example-button-row">
-                <button mat-fab class="example-margin" color="warn" (click)="isCountry('Seoul')">Seoul</button>
-                <button mat-fab class="example-margin" color="warn" (click)="isCountry('New York')">New York</button>
-                <button mat-fab class="example-margin" color="warn" (click)="isCountry('London')">London</button>
-                <button mat-fab class="example-margin" color="warn" (click)="isCountry('Auckland')">Auckland</button>
-                <button mat-fab class="example-margin" color="warn" (click)="isCountry('Seattle')">Seattle</button>
-                <button mat-fab class="example-margin" color="warn" (click)="isCountry('Tokyo')">Tokyo</button>
-                <button mat-fab class="example-margin" color="warn" (click)="isCountry('Berlin')">Berlin</button>
-                <button mat-fab class="example-margin" color="warn" (click)="isCountry('Beijing')">Beijing</button>
+                <button mat-fab class="example-margin" color="warn" (click)="isCountry('Seoul')"><span class="" style="margin-left:-40px;">Seoul</span></button>
+                <button mat-fab class="example-margin" color="warn" (click)="isCountry('New York')"><span class="" style="margin-left:-60px;">New York</span></button>
+                <button mat-fab class="example-margin" color="warn" (click)="isCountry('London')"><span class="" style="margin-left:-50px;">London</span></button>
+                <button mat-fab class="example-margin" color="warn" (click)="isCountry('Auckland')"><span class="" style="margin-left:-60px;">Auckland</span></button>
+                <button mat-fab class="example-margin" color="warn" (click)="isCountry('Seattle')"><span class="" style="margin-left:-50px;">Seattle</span></button>
+                <button mat-fab class="example-margin" color="warn" (click)="isCountry('Tokyo')"><span class="" style="margin-left:-40px;">Tokyo</span></button>
+                <button mat-fab class="example-margin" color="warn" (click)="isCountry('Berlin')"><span class="" style="margin-left:-40px;">Berlin</span></button>
+                <button mat-fab class="example-margin" color="warn" (click)="isCountry('Beijing')"><span class="" style="margin-left:-45px;">Beijing</span></button>
                 </div>
         </section>
-        <div class ="time-section" *ngIf="showClock">
-        <h3 class ="example-h2">{{country}} : {{ todayDate | date: 'HH:mm:ss' :utc}}</h3>
+        <div class ="time-section" >
+            <h3>  </h3>
+            <h3 *ngIf="showClock" class ="example-h2">{{country}} : {{ todayDate | date: 'HH:mm:ss' :utc}}</h3>
         </div>
         
 

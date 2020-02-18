@@ -1,18 +1,19 @@
-<mat-card class="card-content" >
+<mat-card class="bus-section" >
     <mat-card-content >
     <section>
-        <mat-card-title class="time-section">{{station}}정류장 도착예정시간</mat-card-title>
-        <mat-card-subtitle class="time-section">정류소 고유번호 : 22272</mat-card-subtitle>
+        <h2 style="font-weight:600;" class="time-section" ><span style="color:navajowhite">{{station}}</span>정류장 도착예정시간</h2>
+        <h3 class="time-section" style="font-weight:500px; font-size:30px">정류소 고유번호 : 22272</h3>
     
 </section>
-<section class="lab-section" >
+<section class="lab-section" style="margin-top:30px;">
     
-    <h2 class="time-section">첫번째 버스 도착예정 시간 : <span style=" color:salmon">{{firsttime }}</span></h2>
-    <h2 class="time-section">두번째 버스 도착예정 시간 : <span style=" color:royalblue">{{secondtime}}</span></h2>
+    <h3 class="time2-section" style="font-weight:600;">첫번째 버스 도착예정 시간 : <span style="font-weight:600; color:rgb(242,121,163);">{{firsttime }}</span></h3>
+    <h3 class="time2-section" style="font-weight:600;">두번째 버스 도착예정 시간 : <span style="font-weight:600; color:white">{{secondtime}}</span></h3>
 </section>
 <section  class = "example-section">
-<div class="example-button-row">
-    <button mat-raised-button  (click)="getBusInfo()" >버스정보확인</button>
+<div class="example-button-row" style="margin-top:30px;">
+    <button mat-raised-button style="font-weight:600; text-transform: uppercase;margin-right: 15px;
+    font-size: 18px;padding: 8px 30px;color:white;background: rgb(242,121,163);" (click)="getBusInfo()" >버스정보확인</button>
 </div>
 </section>
         

@@ -1,6 +1,9 @@
-<div class="section-basic">
-    <app-menu6-search (datachange)="onDataChange($event)"></app-menu6-search>
-</div>
+<section  class="promo section offset-header">
+    <div class="section-basic">
+        <app-menu6-search (datachange)="onDataChange($event)"></app-menu6-search>
+    </div>
+    
+    <app-menu6-info [data] = "data" ></app-menu6-info>
+    
 
-<app-menu6-info [data] = "data" ></app-menu6-info>
-
+</section>

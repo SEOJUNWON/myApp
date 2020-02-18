@@ -1,12 +1,24 @@
 .example-h2 {
     margin: 10px;
+    text-align: center;
+    font-size:78px;
+    margin-bottom:30px;
+    color:#28023B
+    
+  }
+  .car-section{
+    background: #d3b7d8;
+      color: #fff;
+      padding-top: 100px;
+      padding-bottom:300px
   }
   
   .example-section {
-    display: flex;
     align-content: center;
     align-items: center;
-    height: 60px;
+    height: 70px;
+    text-align: center;
+    font-size:30px;
   }
   
   .example-margin {
@@ -24,3 +36,9 @@
     font-size:30px;
     text-align:center;
   }
+  .title{
+    color:#A13E97;
+    font-weight:600; text-transform: uppercase;
+  }
+
+  

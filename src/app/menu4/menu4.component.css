@@ -19,13 +19,18 @@
   }
   .time-section {
     border:0px solid #dedede;
-    width:600px;
-    height:50px;
     line-height:50px;
     columns: #666666;
-    font-size:20px;
+    font-size:60px;
     text-align:center;
-    color: darkcyan;
+    color: rgb(52,76,100);
+    font-weight:700px;
+  }
+  .time2-section {
+   
+    text-align:center;
+    color: rgb(52,76,100);
+    font-weight:1000px;
   }
   .example-button-row button,
 .example-button-row a {
@@ -47,10 +52,28 @@ mat-slider {
     border:0px solid #dedede;
     line-height:20px;
     columns: #666666;
-    font-size:40px;
+    font-size:20px;
     text-align:center;
     display: block;
+    margin-top:100px;
   }
   .card-content{
       width:600px
   }
+  
+.bus-section{
+  background: rgb(110,150,190);
+    color:white;
+    padding-top: 150px;
+}
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.text-center {
+  text-align: center!important;
+}

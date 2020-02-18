@@ -1,21 +1,29 @@
-<mat-card>
-    <mat-card-content class="card-content">
-        <section>
-            <h3 class ="time-section">{{displayTime}}</h3>
+
+<mat-card style="padding:150px 0px 25rem 0px"class = "stopwatch-section">
+    <mat-card-content style="display:inline"class="container text-center">
+        <section style="margin-bottom: 60px;">
+            <h3 style="color:#eebf3f;font-weight:700;font-size: 98px;"class ="time-section">{{displayTime}}</h3>
         </section>
 
-        <section class = "example-section">
+        <section style="margin-bottom: 30px;"class = "example-section">
             <div class="example-button-row">
-                <button mat-raised-button  (click)="resetTime()" >{{isStart ? "Reset" : "Lap"}}</button>
-                <button mat-raised-button [color]="isStart ? 'primary' : 'accent'"  (click)="firstClick()">{{isStart ? "Start" : "Stop"}}</button>
+                <button mat-raised-button style="font-weight:600; text-transform: uppercase;margin-right: 15px;font-size: 18px; padding: 8px 30px;" 
+                (click)="resetTime()" >{{isStart ? "Reset" : "Lap"}}</button>
+                <button mat-raised-button  style="font-weight:600; text-transform: uppercase;margin-right: 15px;
+                font-size: 18px;padding: 8px 30px;"
+                [color]="isStart ? 'primary' : 'accent'"  (click)="firstClick()">{{isStart ? "Start" : "Stop"}}</button>
                 
             </div>
         </section>
 
-        <section class ="lap-section">
-            <p *ngFor="let list of lap">
-            {{list}}
-            </p>
+        <section style="color:white;background: #0c86ae;
+        padding: 50px;
+        margin: 50 auto;"class ="lap-section">
+            <p style="font-weight:500;margin-top:2rem;margin-bottom:2rem;"*ngFor="let list of lap">
+                {{list}}
+                </p>
+
+            
         </section>
                 
         

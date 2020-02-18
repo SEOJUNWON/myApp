@@ -1,5 +1,14 @@
 .example-h2 {
     margin: 10px;
+    color:Brown;
+    font-size: 98px;
+  }
+  
+  .clock-section{
+    background:#ff9f9f;
+      color: #fff;
+      padding-top: 150px;
+      padding-bottom:300px
   }
   
   .example-section {
@@ -9,18 +18,40 @@
     height: 60px;
   }
   
-  .example-margin {
+  .example-margin{
     margin: 0 10px;
+    font-weight:600; text-transform: uppercase;margin-right: 10px;
+                font-size: 18px;padding:25px 50px 80px 55px;
+                font-size: 25px;
+
   }
   mat-slider {
     width: 500px;
   }
   .time-section {
     border:0px solid #dedede;
-    width:400px;
-    height:50px;
     line-height:50px;
     columns: #666666;
     font-size:30px;
     text-align:center;
+    background:wheat;
+    padding:100px;
+    margin-top:20px;
   }
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .text-center {
+    text-align: center!important;
+  }
+  .mat-fab .mat-button-wrapper {
+    padding: 16px 0;
+    /* display: inline-block; */
+    line-height: 24px;
+}
+  

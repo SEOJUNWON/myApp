@@ -19,15 +19,18 @@ export class Menu3Component implements OnInit {
   interval:any;
   lap:Array<String> = [];
   isReset:boolean;
+  isFirst:boolean;
 
   constructor() { }
 
   ngOnInit() {
     this.isStart = true;
+    this.isFirst = true;
     this.resetTime();
   }
 
   firstClick(){
+    this.isFirst = false;
   if(this.isStart == true){
     this.isStart = false;
     this.startTime();
@@ -40,6 +43,7 @@ export class Menu3Component implements OnInit {
   }
 
 resetTime(){
+  
   if(this.isStart ==false){
     this.addLap();
   }
@@ -51,6 +55,7 @@ resetTime(){
     this.b = 0;
     this.c = 0;
     this.lap = [];
+    this.isFirst = true;
     this.displayTime = this.minute+" : "+ this.second+" : "+ this.mSecond;
   }
   
