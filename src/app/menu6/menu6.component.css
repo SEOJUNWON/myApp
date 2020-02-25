@@ -1,0 +1,14 @@
+ .box {
+    border: 1px solid #ccc;
+    padding: 20px 20px;
+    margin-bottom: 10px;
+}
+
+table thead tr {
+    background-color: #f4f3f8;
+}
+
+table thead tr th {
+    font-weight: bold;
+    text-align: center;
+}

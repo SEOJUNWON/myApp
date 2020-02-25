@@ -1,0 +1,50 @@
+
+.dust-section{
+    background: #FED770;
+      color:white;
+      padding-top: 150px;
+  }
+  .lap-section {
+    border:0px solid #dedede;
+    line-height:20px;
+    columns: #666666;
+    font-size:20px;
+    text-align:center;
+    margin-top:100px;
+    display:block;
+  }
+  .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .text-center {
+    text-align: center!important;
+  }
+
+  .time-section {
+    border:0px solid #dedede;
+    line-height:50px;
+    columns: #666666;
+    font-size:60px;
+    text-align:center;
+    color: rgb(52,76,100);
+    font-weight:600px;
+  }
+  .button{
+      text-align: center;
+  }
+  .data-section{
+      margin-top:30px;
+      text-align:center;
+      text-align:center;
+    color: #076A67;
+    font-size:70px;
+    font-weight:600px;
+    text-align:center;
+    background:#A9DFED;
+    padding:25px;
+  }

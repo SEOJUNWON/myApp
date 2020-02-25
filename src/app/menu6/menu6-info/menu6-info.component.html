@@ -1,5 +1,23 @@
-
+<!-- 
 <div *ngFor="let list of dataList">
     아이디 : <p>{{list.id}}</p>
     비밀번호 : <p>{{list.password}}</p>
-</div>
+</div> -->
+table!
+<mat-table #table [dataSource]="dataSource" matSort>
+    <ng-container matColumnDef="id">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>아이디</mat-header-cell>
+        <mat-cell *matCellDef="let info"> {{info.id}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="password">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>비밀번호</mat-header-cell>
+        <mat-cell *matCellDef="let info"> {{info.password }} </mat-cell>
+    </ng-container>
+
+    
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"
+        [ngClass]="{'highlight': selectedRowId == row.sk}" (click)="onClickRow(row)"></mat-row>
+</mat-table>

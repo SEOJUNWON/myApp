@@ -1,9 +1,30 @@
-<section  class="promo section offset-header">
+<section  >
     <div class="section-basic">
         <app-menu6-search (datachange)="onDataChange($event)"></app-menu6-search>
     </div>
-    
-    <app-menu6-info [data] = "data" ></app-menu6-info>
+    <div class="row">
+        <div class ="col-sm-12">
+            <div class="section-basic mb-0">
+                <mat-table [dataSource]="dataSource" matSort>
+                    <ng-container matColumnDef="id">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header style="color:black">아이디</mat-header-cell>
+                        <mat-cell *matCellDef="let info"> {{info.id}} </mat-cell>
+                    </ng-container>
+                
+                    <ng-container matColumnDef="password">
+                        <mat-header-cell *matHeaderCellDef mat-sort-header>비밀번호</mat-header-cell>
+                        <mat-cell *matCellDef="let info"> {{info.password }} </mat-cell>
+                    </ng-container>
+                
+                    
+                
+                    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                    <mat-row *matRowDef="let row; columns: displayedColumns;"
+                    (click)="onClickRow(row)"></mat-row>
+                </mat-table>
+            </div>
+        </div>
+    </div>
     
 
 </section>

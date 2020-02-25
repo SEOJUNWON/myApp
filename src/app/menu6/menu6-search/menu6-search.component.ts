@@ -18,7 +18,7 @@ export class Menu6SearchComponent implements OnInit {
   isPopup: boolean;
 
   @ViewChild(Menu6InfoComponent,{static: false}) menu6InfoComponent: Menu6InfoComponent;
-  @Output('datachange') datachange: EventEmitter<any> = new EventEmitter<any>();
+  @Output() datachange: EventEmitter<any> = new EventEmitter<any>();
   
   constructor(private formBuilder: FormBuilder,private dialog: MatDialog) { }
 
@@ -49,7 +49,7 @@ export class Menu6SearchComponent implements OnInit {
            let pw : string = String(result.pw);
            let tempData = new Data(id,pw);
            console.info(tempData);
-           this.data.push(tempData);
+           this.datachange.emit(tempData);
          }
        });
     }
@@ -57,7 +57,7 @@ export class Menu6SearchComponent implements OnInit {
       let id = String(this.form.controls.user_id.value);
       let pw = String(this.form.controls.user_pw.value);
       let tempData = new Data(id,pw);
-      this.data.push(tempData);
+      this.datachange.emit(tempData);
       this.initializeForm();
     }
     
@@ -65,10 +65,10 @@ export class Menu6SearchComponent implements OnInit {
 
   onClickDel(isAllDel:boolean){
     if(isAllDel){
-      this.data=[];
+      this.datachange.emit("all");
     }
     else{
-      this.data.pop();
+      this.datachange.emit("one");
     }
     
   }

@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { Data } from '../Data';
 import { Menu6DetailComponent } from '../menu6-detail/menu6-detail.component';
+import { MatTableDataSource } from '@angular/material';
 
 @Component({
   selector: 'app-menu6-info',
@@ -9,19 +10,22 @@ import { Menu6DetailComponent } from '../menu6-detail/menu6-detail.component';
 })
 export class Menu6InfoComponent implements OnInit {
   dataList:Array<Data>;
-  displayedColumns:['id','password'];
+  displayedColumns:['id','pw'];
   detailOpened: boolean;
   data2 = ['a','b','c','d'];
-  @Input('data') data: Data;
+  dataSource : MatTableDataSource<Data>;
+  @Input() data: Data;
 
   constructor() { }
 
   ngOnInit() {
     console.info(this.data);
+    this.dataSource = new MatTableDataSource();
     if (this.data){
       this.dataList.push(this.data);
     }
-    
+    this.dataSource.data = this.dataList;
+    console.info(this.dataSource);
   }
 
   onClickRow(data:any){

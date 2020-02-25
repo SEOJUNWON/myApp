@@ -1,19 +1,24 @@
-<mat-card class="card-content" >
+<mat-card class="dust-section" >
     <mat-card-content >
     <section>
-        <mat-card-title class="time-section">{{city}}미세먼지정보</mat-card-title>
+        <h3 style="font-weight:600;" class="time-section"><span>{{city}}</span>미세먼지정보</h3>
     
 </section>
 <section class="lab-section" >
+    <div class ="data-section">
+        <h4 class="time-section2">미세먼지농도 : <span style=" color:salmon">{{dust10}}</span></h4>
+    <h4 class="time-section2">미세먼지 등급 : <span style=" color:royalblue">{{dust10grade}}</span></h4>
+    <h4 class="time-section2">초미세먼지농도 : <span style=" color:salmon">{{dust25 }}</span></h4>
+    <h4 class="time-section2">초미세먼지 등급 : <span style=" color:royalblue">{{dust25grade}}</span></h4>
+
+    </div>
     
-    <h2 class="time-section">미세먼지농도 : <span style=" color:salmon">{{dust10}}</span></h2>
-    <h2 class="time-section">미세먼지 등급 : <span style=" color:royalblue">{{dust10grade}}</span></h2>
-    <h2 class="time-section">초미세먼지농도 : <span style=" color:salmon">{{dust25 }}</span></h2>
-    <h2 class="time-section">초미세먼지 등급 : <span style=" color:royalblue">{{dust25grade}}</span></h2>
+    
 </section>
 <section  class = "example-section">
-<div class="example-button-row">
-    <button mat-raised-button  (click)="getDust()" >미세먼지정보확인</button>
+<div class="button">
+    <button mat-raised-button style="font-weight:600; text-transform: uppercase;margin-right: 15px;
+    font-size: 18px;padding: 8px 30px;color:white;background: #F29F8F"  (click)="getDust()" >미세먼지정보확인</button>
 </div>
 </section>
         
